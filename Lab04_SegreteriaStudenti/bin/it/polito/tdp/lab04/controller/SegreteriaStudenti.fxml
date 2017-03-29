@@ -28,12 +28,12 @@
                         <Insets left="10.0" />
                      </padding>
                   </Label>
-                  <ComboBox prefWidth="150.0" />
+                  <ComboBox fx:id="comboCorso" />
                </children>
             </HBox>
             <HBox>
                <children>
-                  <Button mnemonicParsing="false" text="Cerca iscritti corso : ">
+                  <Button fx:id="btnCercaIscrittiCorso" mnemonicParsing="false" onAction="#doCercaIscrittiCorso" text="Cerca iscritti corso : ">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -42,15 +42,15 @@
             </HBox>
             <HBox spacing="10.0">
                <children>
-                  <Label prefHeight="21.0" prefWidth="138.0" text="Studente: ">
+                  <Label prefHeight="21.0" prefWidth="99.0" text="Studente: ">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField />
-                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="48.0" />
-                  <TextField />
-                  <TextField>
+                  <TextField fx:id="txtMatricola" />
+                  <Button fx:id="btnCercaNome" mnemonicParsing="false" onAction="#doCercaNome" />
+                  <TextField fx:id="txtNome" />
+                  <TextField fx:id="txtCognome">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
@@ -59,23 +59,23 @@
             </HBox>
             <HBox>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="118.0" text="Cerca corsi ">
+                  <Button fx:id="btnCercaCorsi" mnemonicParsing="false" onAction="#doCercaCorsi" prefHeight="31.0" prefWidth="118.0" text="Cerca corsi ">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Button>
                   <Region prefHeight="31.0" prefWidth="403.0" />
-                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="83.0" text="Iscrivi">
+                  <Button fx:id="btnIscrivi" mnemonicParsing="false" onAction="#doIscrivi" prefHeight="31.0" prefWidth="83.0" text="Iscrivi">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Button>
                </children>
             </HBox>
-            <TextArea />
+            <TextArea fx:id="txtResult" />
             <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button contentDisplay="CENTER" mnemonicParsing="false" text="Reset">
+                  <Button fx:id="btnReset" contentDisplay="CENTER" mnemonicParsing="false" onAction="#doReset" text="Reset">
                      <HBox.margin>
                         <Insets left="10.0" right="10.0" />
                      </HBox.margin>

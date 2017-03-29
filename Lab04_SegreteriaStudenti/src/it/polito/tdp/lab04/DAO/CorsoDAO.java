@@ -13,6 +13,7 @@ import it.polito.tdp.lab04.model.Studente;
 
 public class CorsoDAO {
 
+	
 	/*
 	 * Ottengo tutti i corsi salvati nel Db
 	 */
@@ -32,8 +33,16 @@ public class CorsoDAO {
 
 				// Crea un nuovo JAVA Bean Corso
 				// Aggiungi il nuovo Corso alla lista
+				String codins = rs.getString("codins");
+				int crediti = rs.getInt("crediti");
+				String nome = rs.getString("nome");
+				int pd= rs.getInt("pd");
+				
+				corsi.add(new Corso(codins, crediti, nome, pd));
+				
 			}
-
+			
+			conn.close();
 			return corsi;
 
 		} catch (SQLException e) {
